@@ -1,0 +1,20 @@
+version: "3"
+services:
+  reverseproxy:
+    build:
+      context: ../../udagram-reverseproxy
+    image: ruizhewa/udagram-reverseproxy
+  backend_user:
+    build:
+      context: ../../udagram-api-user
+    image: ruizhewa/udagram-api-user
+  backend_feed:
+    build:
+      context: ../../udagram-api-feed  
+    image: ruizhewa/udagram-api-feed
+  frontend:
+    build:
+      context: ../../udagram-frontend
+      args:
+        - BUILD_ENV=development
+    image: ruizhewa/udagram-frontend:local
