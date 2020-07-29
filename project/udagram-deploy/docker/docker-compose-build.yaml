@@ -17,4 +17,4 @@ services:
       context: ../../udagram-frontend
       args:
         - BUILD_ENV=development
-    image: ruizhewa/udagram-frontend:local
+    image: ruizhewa/udagram-frontend
